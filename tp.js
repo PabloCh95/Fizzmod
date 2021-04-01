@@ -3,10 +3,10 @@ Realizar una función que permita contar la cantidad de vocales que tiene un tex
 No habrá discriminación entre las vocales en mayúscula y en minúscula. Las vocales acentuadas no se contarán. 
 El valor obtenido se retornará al terminar la función. Si se no se recibe un string retornará -1.
 */
-let texto="";
+let texto="hola mundo";
 function contarVocales(texto) {
   let contvocales=0;
-  if(texto===null||texto===""){
+  if(texto!=""){
     return -1
   }else{
   const text1=texto.toLowerCase();
@@ -28,7 +28,7 @@ console.log(contarVocales(texto));
 Crear un repo en github y subir todo el proyecto. Se ignorará la carpeta node_modules (para ellos está creado el archivo .gitignore en este proyecto) Esta función devolverá un string con la url del repo.
 */
 function urlRepo() {
-  const URL="repo"
+  const URL="https://github.com/PabloCh95/Fizzmod.git"
   return URL;
 }
 
