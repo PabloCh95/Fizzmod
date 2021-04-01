@@ -6,7 +6,7 @@ El valor obtenido se retornará al terminar la función. Si se no se recibe un s
 let texto="hola mundo";
 function contarVocales(texto) {
   let contvocales=0;
-  if(texto!=""){
+  if(typeof(texto)!="string"){
     return -1
   }else{
   const text1=texto.toLowerCase();
@@ -39,7 +39,7 @@ hayNumeros devolverá true en caso de que encuentre un número en dicho texto, c
 En ambos métodos, si el texto no es válido, se devolverá -1
 Crear un propiedad estática contadorInstancias que me indique cuantas instancias hay de esa clase.
 */
-
+//falta resolver..
 class Ejercicio{
   
     constructor(texto){
@@ -63,6 +63,8 @@ class Ejercicio{
 }
 const crearClase = () => {
     let n1 = new Ejercicio("Hola mundo");
+    n1.contadorPalabras();
+    n1.hayNumeros();
     return n1;
 }
 crearClase();
