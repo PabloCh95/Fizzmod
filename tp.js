@@ -41,10 +41,11 @@ Crear un propiedad estática contadorInstancias que me indique cuantas instancia
 class Ejercicio{
   
     static contadorInstancias;
+
     constructor(texto){
       this.texto=texto;
-      if(!Ejercicio.contadorInstancias)Ejercicio.contadorInstancias=0
-      Ejercicio.contadorInstancias;
+      if(!Ejercicio.contadorInstancias) Ejercicio.contadorInstancias=0
+      Ejercicio.contadorInstancias=Ejercicio.contadorInstancias+1
     }
     //Metodos
     contadorPalabras(){
@@ -52,7 +53,9 @@ class Ejercicio{
           return -1;
         }else{
         let contWord= this.texto.trim().replace(/\s+/gi, ' ').split(' ').length;
-        console.log(typeof(contWord))
+        if(this.texto===" " || this.texto===""){
+          contWord=0;
+        }
         return contWord;
         }
     }
@@ -73,9 +76,6 @@ class Ejercicio{
 
 }
 const crearClase = () => {
-    let n1 = new Ejercicio("Hola mundo");
-    console.log(n1.contadorPalabras());
-    console.log(n1.hayNumeros());
     return Ejercicio;
 }
 crearClase();
